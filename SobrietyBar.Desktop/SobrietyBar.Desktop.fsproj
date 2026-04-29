@@ -6,11 +6,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="Main.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\SobrietyBar\SobrietyBar.fsproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia.Desktop" Version="12.0.0" />
+    <PackageReference Include="Avalonia.FuncUI" Version="2.0.0-preview1" />
+    <PackageReference Include="Avalonia.Themes.Fluent" Version="12.0.0" />
   </ItemGroup>
 
 </Project>
