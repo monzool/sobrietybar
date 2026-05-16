@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="SobrietyBar.Desktop/SobrietyBar.Desktop.fsproj" />
+  <Project Path="SobrietyBar/SobrietyBar.fsproj" />
+</Solution>
