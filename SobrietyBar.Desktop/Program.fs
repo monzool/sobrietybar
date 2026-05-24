@@ -5,12 +5,13 @@ open Avalonia.Controls.ApplicationLifetimes
 open Avalonia.Themes.Fluent
 open Avalonia.FuncUI.Hosts
 open Avalonia.Controls
+open LiveChartsCore
+open LiveChartsCore.SkiaSharpView
 
 type MainWindow() =
     inherit HostWindow()
     do
         base.Title <- "Counter Example"
-        base.Icon <- WindowIcon(System.IO.Path.Combine("Assets","Icons", "icon.ico"))
         base.Height <- 400.0
         base.Width <- 400.0
         base.Content <- Main.view
@@ -21,6 +22,7 @@ type App() =
     override this.Initialize() =
         this.Styles.Add (FluentTheme())
         this.RequestedThemeVariant <- Styling.ThemeVariant.Dark
+        LiveCharts.Configure(fun c -> c.UseDefaults() |> ignore)
 
     override this.OnFrameworkInitializationCompleted() =
         match this.ApplicationLifetime with
